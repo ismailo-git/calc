@@ -4,6 +4,15 @@ const AmazingNumberButton = ({ result, setResult }) => {
 	const clickHandler = (e) => {
 		setResult(result?.concat(e.target?.value));
 	};
+
+	const clear = () => {
+		setResult("");
+	};
+
+	const backspace = () => {
+		setResult(result?.slice(0, -1));
+	};
+
 	return (
 		<div className="AmazingNumberButton">
 			<button onClick={clickHandler} value="1">
@@ -36,6 +45,10 @@ const AmazingNumberButton = ({ result, setResult }) => {
 			<button value="0" onClick={clickHandler}>
 				0
 			</button>
+			<button className="btn clear span-2" onClick={clear}>
+				AC
+			</button>
+			<button onClick={backspace}>&larr;</button>
 		</div>
 	);
 };

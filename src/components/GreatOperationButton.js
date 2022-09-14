@@ -4,13 +4,13 @@ const GreatOperationButton = ({ result, setResult }) => {
 	const handlerClick = (e) => {
 		setResult(result?.concat(e.target?.value));
 	};
-	const clear = () => {
-		setResult("");
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		console.log(e.target.value);
 	};
 
-	const backspace = () => {
-		setResult(result?.slice(0, -1));
-	};
 	return (
 		<div className="GreatOperationButton">
 			<button value="+" onClick={handlerClick}>
@@ -28,8 +28,11 @@ const GreatOperationButton = ({ result, setResult }) => {
 			<button value="." onClick={handlerClick}>
 				.
 			</button>
-			<button onClick={clear}>C</button>
-			<button onClick={backspace}>&#9224;</button>
+			<form action="PHP/server.php">
+				<button type="submit" onClick={handleSubmit}>
+					SAVE
+				</button>
+			</form>
 		</div>
 	);
 };

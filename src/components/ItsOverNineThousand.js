@@ -1,9 +1,20 @@
 import React from "react";
 
 const ItsOverNineThousand = () => {
+	// const rendering = () => {
+	// 	try {
+	// 		setResult(eval(result).toString());
+	// 	} catch (error) {
+	// 		setResult("Error");
+	// 	}
+
+	// 	// if (eval(result).toString() > 50) {
+	// 	// 	console.log("yes");
+	// 	// }
+	// };
 	return (
 		<div>
-			<h2>It is overNineHundred</h2>
+			<button>Yahou</button>
 		</div>
 	);
 };
