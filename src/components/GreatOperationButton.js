@@ -5,12 +5,6 @@ const GreatOperationButton = ({ result, setResult }) => {
 		setResult(result?.concat(e.target?.value));
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
-		console.log(e.target.value);
-	};
-
 	return (
 		<div className="GreatOperationButton">
 			<button value="+" onClick={handlerClick}>
@@ -29,7 +23,7 @@ const GreatOperationButton = ({ result, setResult }) => {
 				.
 			</button>
 			<form action="PHP/server.php">
-				<button type="submit" onClick={handleSubmit}>
+				<button type="submit" className="save-button">
 					SAVE
 				</button>
 			</form>

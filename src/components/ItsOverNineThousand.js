@@ -1,20 +1,9 @@
 import React from "react";
 
-const ItsOverNineThousand = () => {
-	// const rendering = () => {
-	// 	try {
-	// 		setResult(eval(result).toString());
-	// 	} catch (error) {
-	// 		setResult("Error");
-	// 	}
-
-	// 	// if (eval(result).toString() > 50) {
-	// 	// 	console.log("yes");
-	// 	// }
-	// };
+const ItsOverNineThousand = (props) => {
 	return (
-		<div>
-			<button>Yahou</button>
+		<div className="ItsOverNineThousand">
+			<h2>{props.title}</h2>
 		</div>
 	);
 };

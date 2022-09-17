@@ -1,6 +1,6 @@
 import React from "react";
 
-const beautifulScreen = ({ result, setResult }) => {
+const BeautifulScreen = ({ result, setResult }) => {
 	return (
 		<div className="BeautifulScreen">
 			<form>
@@ -10,4 +10,4 @@ const beautifulScreen = ({ result, setResult }) => {
 	);
 };
 
-export default beautifulScreen;
+export default BeautifulScreen;

@@ -1,24 +1,17 @@
 import React from "react";
-import ItsOverNineThousand from "./ItsOverNineThousand";
 
 const MagnificientEqualButton = ({ result, setResult }) => {
 	const calculate = () => {
 		try {
 			setResult(eval(result).toString());
 		} catch (error) {
-			setResult("Error");
-		}
-
-		if (eval(result).toString() > 50) {
-			<ItsOverNineThousand />;
-		} else {
-			return "";
+			setResult("Calcul Impossible");
 		}
 	};
 
 	return (
 		<div className="MagnificientEqualButton">
-			<button onClick={calculate} value="=">
+			<button onClick={calculate} value="=" className="calculate-button">
 				=
 			</button>
 		</div>
